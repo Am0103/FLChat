@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SPSearchContactViewController">
+            <connections>
+                <outlet property="searchDisplayController" destination="EgQ-PW-gOJ" id="h32-JH-TI7"/>
+                <outlet property="tableView" destination="8IK-sC-Pgu" id="bMm-GX-CpF"/>
+                <outlet property="view" destination="bzC-MF-npA" id="POC-4s-eJV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bzC-MF-npA">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIM-aK-3xV">
+                    <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="找人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZM-qk-1nv">
+                            <rect key="frame" x="24" y="3" width="34" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="ggK-aT-4bw"/>
+                                <constraint firstAttribute="height" constant="24" id="t5K-6U-H3m"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjm-l5-LO5">
+                            <rect key="frame" x="0.0" y="29" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.29999999999999999" id="JGn-f8-xY7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Pjm-l5-LO5" secondAttribute="bottom" id="29t-rI-2wg"/>
+                        <constraint firstItem="Pjm-l5-LO5" firstAttribute="leading" secondItem="iIM-aK-3xV" secondAttribute="leading" id="HNk-Gy-7D6"/>
+                        <constraint firstAttribute="trailing" secondItem="Pjm-l5-LO5" secondAttribute="trailing" id="PGl-1F-Xnl"/>
+                        <constraint firstItem="xZM-qk-1nv" firstAttribute="top" secondItem="iIM-aK-3xV" secondAttribute="top" constant="3" id="SSu-qU-n5D"/>
+                        <constraint firstAttribute="height" constant="30" id="cS6-gT-aQn"/>
+                        <constraint firstItem="xZM-qk-1nv" firstAttribute="leading" secondItem="iIM-aK-3xV" secondAttribute="leading" constant="24" id="uip-qW-nty"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8IK-sC-Pgu">
+                    <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gS3-Gq-Mtu"/>
+                        <outlet property="delegate" destination="-1" id="9e9-f1-eFg"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="iIM-aK-3xV" firstAttribute="top" secondItem="bzC-MF-npA" secondAttribute="top" constant="64" id="5GW-ty-fTO"/>
+                <constraint firstItem="iIM-aK-3xV" firstAttribute="leading" secondItem="bzC-MF-npA" secondAttribute="leading" id="7qM-Yp-3bC"/>
+                <constraint firstAttribute="bottom" secondItem="8IK-sC-Pgu" secondAttribute="bottom" id="9Rk-Sk-yUO"/>
+                <constraint firstItem="8IK-sC-Pgu" firstAttribute="top" secondItem="iIM-aK-3xV" secondAttribute="bottom" id="9Ud-uv-I97"/>
+                <constraint firstAttribute="trailing" secondItem="iIM-aK-3xV" secondAttribute="trailing" id="UoA-QM-IkW"/>
+                <constraint firstAttribute="trailing" secondItem="8IK-sC-Pgu" secondAttribute="trailing" id="rcs-dI-8vF"/>
+                <constraint firstItem="8IK-sC-Pgu" firstAttribute="leading" secondItem="bzC-MF-npA" secondAttribute="leading" id="tKJ-zu-KhG"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="185.5" y="622.5"/>
+        </view>
+        <searchDisplayController id="EgQ-PW-gOJ">
+            <connections>
+                <outlet property="delegate" destination="-1" id="BTV-Pd-op3"/>
+                <outlet property="searchContentsController" destination="-1" id="z69-46-eOY"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="gQq-Tj-ZPJ"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="MB7-eH-QzD"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>
